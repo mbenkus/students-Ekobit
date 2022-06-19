@@ -5,9 +5,9 @@ using AutoMapper;
 
 namespace Library.Services
 {
-    public class MovieShowTimeService : EntityService<Entities.MovieShowtime, MovieShowtime, int>
+    public class MovieShowtimeService : EntityService<Entities.MovieShowtime, MovieShowtime, int>
     {
-        public MovieShowTimeService(
+        public MovieShowtimeService(
             IDatabaseScope database,
             IGenericRepository<Entities.MovieShowtime> repository,
             IMapper mapper)

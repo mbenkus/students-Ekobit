@@ -16,6 +16,6 @@
 
         public int ZipCode { get; set; }
 
-        public ICollection<MovieShowtime> MovieShowtime { get; set; }
+        public ICollection<MovieShowtime>? MovieShowtime { get; set; }
     }
 }

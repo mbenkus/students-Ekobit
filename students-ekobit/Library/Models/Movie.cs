@@ -12,6 +12,6 @@
 
         public decimal Rating { get; set; }
 
-        public ICollection<MovieShowtime> MovieShowtime { get; set; }
+        public ICollection<MovieShowtime>? MovieShowtime { get; set; }
     }
 }

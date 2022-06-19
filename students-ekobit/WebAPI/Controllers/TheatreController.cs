@@ -7,47 +7,47 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MovieController : ControllerBase
+    public class TheatreController : ControllerBase
     {
-        private readonly MovieService _movieService;
+        private readonly TheatreService _theatreService;
 
-        public MovieController(MovieService movieService)
+        public TheatreController(TheatreService theatreService)
         {
-            _movieService = movieService;
+            _theatreService = theatreService;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var items = await _movieService.GetAllAsync();
+            var items = await _theatreService.GetAllAsync();
             return Ok(items);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var item = await _movieService.GetAsync(id);
+            var item = await _theatreService.GetAsync(id);
             return Ok(item);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Movie model)
+        public async Task<IActionResult> Post([FromBody] Theatre model)
         {
-            var item = await _movieService.CreateAsync(model);
+            var item = await _theatreService.CreateAsync(model);
             return Ok(item);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Movie model)
+        public async Task<IActionResult> Put(int id, [FromBody] Theatre model)
         {
-            var item = await _movieService.UpdateAsync(id, model);
+            var item = await _theatreService.UpdateAsync(id, model);
             return Ok(item);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            await _movieService.DeleteAsync(id); ;
+            await _theatreService.DeleteAsync(id); ;
             return Ok();
         }
     }

@@ -1,6 +1,7 @@
 using Data.Context;
 using AutoMapper;
 using Data.Entities;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,9 +25,10 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // services
 builder.Services.AddScoped<Library.Services.MovieService>();
 builder.Services.AddScoped<Library.Services.TheatreService>();
-builder.Services.AddScoped<Library.Services.MovieShowTimeService>();
+builder.Services.AddScoped<Library.Services.MovieShowtimeService>();
 
 var app = builder.Build();
+SeedDatabase();    
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -42,3 +44,21 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+void SeedDatabase()
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        try
+        {
+            var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+            dbContext.Database.Migrate();
+            dbContext.Seed();
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+}
