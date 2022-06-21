@@ -1,0 +1,64 @@
+// BUTTONS
+
+
+// Hovers
+
+.button-hover-opacity {
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.button-hover-color {
+  transition: color .3s;
+
+  &:hover {
+    color: $color-hover;
+  }
+}
+
+// Classes
+
+.reset-mat-button {
+  min-width: initial;
+}
+
+
+// BUTTON
+
+.#{$class-prefix}-button {
+  background-color: $color-blue-site;
+  border-radius: $border-radius;
+  color: $color-white;
+  font-size: $font-size-button;
+  transition: background 0.3s $ease-smooth;
+
+  &:hover {
+    background-color: $color-blue-light;
+  }
+
+  &.small {
+    font-size: 0.85rem;
+  }
+
+  &.light {
+    background-color: $color-blue-light;
+  }
+
+  &.gray {
+    background-color: $color-gray;
+  }
+
+  &.margin-h {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  // material button fixes/changes
+
+  &.mat-button {
+    border-radius: $border-radius;
+  }
+}

@@ -1,0 +1,49 @@
+// UPLOADER
+
+.#{$class-prefix}-uploader {
+  @extend .#{$class-prefix}-card-style;
+
+  position: relative;
+
+  &-wrapper {
+    @extend .flex-column;
+
+    align-items: center;
+    border: 3px dashed $color-border-gray;
+    color: $color-gray;
+    border-radius: $border-radius;
+    margin: 8px;
+    padding: 20px;
+  }
+
+  &-input {
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+
+  &-icon {
+    transition: transform 0.5s $ease-smooth;
+
+    .#{$class-prefix}-uploader:hover & {
+      transform: scale(0.8);
+    }
+
+    .mat-icon {
+      font-size: 2rem;
+    }
+  }
+
+  &-text {
+    @extend .text-main;
+
+    font-weight: $font-bold;
+    text-align: center;
+  }
+}

@@ -1,0 +1,73 @@
+//
+
+html {
+  font-size: $font-size;
+}
+
+body {
+  color: $color-black;
+  font-family: $font-family-rc-text;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: $font-regular;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: $font-bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Titles
+
+.title-big {
+  font-size: 2.7rem;
+  font-weight: $font-bold;
+  line-height: 1.2;
+  font-family: $font-family-rc-title;
+}
+
+.title-main {
+  font-size: 1.7rem;
+  font-weight: $font-bold;
+  line-height: 1.5;
+  font-family: $font-family-rc-title;
+}
+
+.title-divider {
+  @extend .title-big;
+
+  display: block;
+  flex: 0 0 100%;
+  margin: 100px 0 10px;
+}
+
+// Texts
+
+.text-big {
+  font-size: 1.3rem;
+  font-weight: $font-regular;
+  line-height: 1.4;
+  font-family: $font-family-rc-text;
+}
+
+.text-main {
+  font-size: 1rem;
+  font-weight: $font-regular;
+  line-height: 1.4;
+  font-family: $font-family-rc-text;
+}
+
+.text-small {
+  font-size: 0.85rem;
+  font-weight: $font-regular;
+  line-height: 1.4;
+  font-family: $font-family-rc-text;
+}
+
+.fontsize-xl {
+  font-size: $font-size-xl;
+  font-family: $font-family-rc-text;
+}

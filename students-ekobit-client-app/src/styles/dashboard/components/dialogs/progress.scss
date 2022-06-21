@@ -1,0 +1,13 @@
+// Dialog progress
+
+.#{$class-prefix}-dialog-progress {
+  &-data {
+    font-weight: $font-bold;
+    margin-top: 10px;
+    text-align: center;
+
+    &-current {
+      color: $color-blue-site;
+    }
+  }
+}

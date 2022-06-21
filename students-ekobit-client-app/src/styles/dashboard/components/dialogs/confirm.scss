@@ -1,0 +1,62 @@
+// confirm modal dialog
+
+.confirm {
+  min-width: 300px;
+  .title {
+    color: white;
+    padding: 10px;
+    background-color: $color-blue-site;
+  }
+
+  .content {
+    height: 3em;
+    min-height: 2em;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .contentTwoLines {
+    height: 4em;
+    min-height: 2em;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .buttons {
+    justify-content: space-evenly;
+    margin-bottom: 0px;
+    margin-right: 15px;
+
+    &-yes {
+      margin-right: 15px;
+    }
+  }
+}
+
+.hidden{
+  display:none;
+}
+.show{
+  display:block;
+}
+
+#modal-container {
+  // position: fixed;
+  // top: 33%;
+  min-width: 300px;
+  background: white;
+  margin: auto;
+  text-align: center;
+  box-shadow: 5px 5px 60px 1px black;
+  z-index: 100;
+}
+
+#overlay {
+  position: absolute;
+  top: 0px;
+  left:  0px;
+  z-index:  99;
+  background:  rgba(0,0,0,0.8);
+  width:  100%;
+  height: 100%;
+}

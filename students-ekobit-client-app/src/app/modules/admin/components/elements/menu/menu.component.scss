@@ -1,0 +1,36 @@
+.applications-container {
+  padding: 0 10px;
+}
+
+.dash-header {
+  margin-top: 65px !important;
+}
+
+.dash-main-logo-header {
+  flex: 0 0 271px;
+  //background: transparent url('/assets/images/rc_logo_smallsizeuse_neg_rgb.png') no-repeat;
+  background-size: contain;
+  margin: 10px 60px 10px 0;
+}
+
+.dash-main-nav {
+  min-width: 600px;
+}
+
+.dash-submenu {
+  flex-direction: column;
+  min-width: 100px;
+  padding: 0 5px;
+}
+
+.image-data {
+  object-fit: cover; 
+  height: 100%;
+}
+
+// needs to be hidden QR code printing
+@media print {
+  :host {
+    display: none;
+  }
+}

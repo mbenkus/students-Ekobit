@@ -1,0 +1,17 @@
+<div id=”overlay”></div>
+<div id="modal-container">
+  <div class="confirm">
+    <h1 mat-dialog-title class="title">{{data.title}}</h1>
+    <div mat-dialog-content class="content">
+      <p>{{data.text}}</p>
+    </div>
+    <div mat-dialog-actions class="buttons">
+      <button mat-raised-button color="primary" class="buttons-yes" [mat-dialog-close]="true">
+        Yes
+      </button>
+      <button mat-raised-button class="buttons-no" [mat-dialog-close]="false" cdkFocusInitial>
+        No
+      </button>
+    </div>
+  </div>
+</div>

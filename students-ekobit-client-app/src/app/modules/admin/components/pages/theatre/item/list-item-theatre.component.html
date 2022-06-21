@@ -1,0 +1,38 @@
+<div class="dash-publications-item">
+  <div class="dash-publications-item-wrapper">
+    <div class="dash-publications-item-content">
+      <div class="dash-publications-item-image-wrapper">
+        <div class="dash-publications-item-initials-image">
+          <p>{{ getName() }}</p>
+        </div>
+      </div>
+      <div class="dash-publications-item-info">
+        <div class="row fontsize-xl">{{ element.name}}</div>
+        <div class="row">{{ element.city }}</div>
+        <div class="dash-data-list">
+          <div class="dash-data-item">
+            <a class="dash-data-label" (click)="showMovieShowings()">
+              Movie Showings
+            </a>
+          </div>
+        </div>
+        <div class="dash-item-menu">
+          <button class="dash-item-menu-button" mat-button [matMenuTriggerFor]="itemMenu">
+            <mat-icon class="dash-item-menu-button-icon">expand_more</mat-icon>
+          </button>
+          <mat-menu #itemMenu="matMenu">
+            <button mat-menu-item (click)="edit(element)">
+              Edit
+            </button>
+            <button mat-menu-item
+              rcmConfirm (accept)="delete(element.id)"
+              confirmTitle="'Delete theatre'"
+              confirmText="'Are you sure you want to delete theatre?'">
+              Delete
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

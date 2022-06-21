@@ -1,0 +1,145 @@
+
+// HEADER
+$dash-header-content-height: 65px;
+.#{$class-prefix}-header {
+  &-cover {
+    height: $cover-height;
+    //background: url('~/src/assets/images/layout/navigation/cover.jpg') no-repeat 50%;
+    background-size: cover;
+  }
+
+  &-content {
+    background-color: $color-white;
+    border-bottom: 1px solid $color-border-gray;
+  }
+
+  &-cover-image {
+    width: 100%;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    // margin-top: 68px;
+  }
+
+  &-wrapper {
+    display: flex;
+    height: $dash-header-content-height;
+    justify-content: space-between;
+    padding: 0 $main-padding-horizontal;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 100%;
+  }
+}
+
+
+  // Info
+  .#{$class-prefix}-info {
+    &-content {
+      align-items: center;
+      display: flex;
+
+      &-title {
+        @extend .truncate-text;
+        color: $color-blue-black;
+        font-size: 1.3rem;
+        padding: 5px;
+      }
+
+      &-subtitle {
+        @extend .truncate-text;
+        color: $color-gray;
+      }
+
+      &-divider {
+        background: $color-gray;
+        margin: 0 10px;
+        height: 20px;
+        width: 1px;
+      }
+    }
+
+    &-list {
+      align-items: center;
+      display: flex;
+      flex: 1 1 100%;
+      justify-content: flex-end;
+      padding-top: 10px;
+
+      &-item {
+        @extend .flex-column;
+        justify-content: center;
+        text-align: center;
+      }
+
+      &-number {
+        color: $color-red-dark;
+        font-size: 1.6rem;
+        font-weight: $font-bold;
+        line-height: 1;
+      }
+
+      &-number2 {
+        color: $color-red-dark;
+        font-size: 1.6rem;
+        font-weight: $font-bold;
+        line-height: 1;
+        padding: 30 0px;
+        padding-bottom: 10px;
+      }
+
+      &-type {
+        color: $color-red-dark;
+        font-size: 1.2rem;
+        font-weight: $font-bold;
+        line-height: 1;
+        padding: 0 30px;
+        padding-bottom: 10px;
+      }
+
+      &-type2 {
+        color: $color-red-dark;
+        font-size: 1.2rem;
+        font-weight: $font-bold;
+        line-height: 1;
+        padding: 30 0px;
+        padding-bottom: 10px;
+      }
+
+
+      &-label {
+        color: $color-gray;
+        font-size: 0.8rem;
+        font-weight: $font-bold;
+        line-height: 2.5;
+      }
+
+      &-label2 {
+        color: $color-gray;
+        font-size: 1.2rem;
+        font-weight: $font-bold;
+        padding: 30 0px;
+        line-height: 2.5;
+      }
+
+      &-divider {
+        background: $color-border-gray;
+        margin: 0 33px;
+        height: 42px;
+        width: 1px;
+      }
+
+      &-asset {
+        margin-left: 40px;
+        height: 24px;
+
+        .mat-icon {
+          color: $color-border-gray;
+        }
+      }
+    }
+  }

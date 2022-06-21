@@ -1,0 +1,118 @@
+// FORM ELEMENTS
+
+.#{$class-prefix}-form {
+  &-field {
+    width: 100%;
+
+    &-double {
+      width: 45%;
+      margin-right: 5%;
+    }
+  }
+
+  &-datepicker {
+    margin-top: 8px;
+    color: #666;
+
+    &-small {
+      width: 19%;
+      margin-right: 5px;
+      font-size: 12px;
+
+      &-label {
+        font-weight: bold;
+      }
+
+      &-input {
+        padding-top: 5px !important;
+        font-size: 0.75rem !important;
+      }
+    }
+  }
+
+  &-textarea {
+    min-height: 100px;
+  }
+
+  &-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-submit {
+    &-wrapper {
+      display: flex;
+    }
+  }
+
+  &-subsection {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    &-title {
+      color: $color-blue-site;
+      font-weight: bold;
+      font-size: 11px;
+      padding-left: 5px;
+    }
+
+    &-body {
+      margin-top: 5px;
+
+      &-text {
+        margin-top: 5px;
+        font-size: 1.1rem;
+
+        &-item {
+          margin-top: 5px;
+          margin-bottom: 5px;
+
+          &-label {
+            font-size: 1.1rem;
+            color: #979797;
+          }
+
+          &-value {
+            padding-top: 5px;
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Slide-toggle
+
+.#{$class-prefix}-slide-toggle {
+  align-items: center;
+  display: inline-flex;
+
+  &-label {
+    color: $color-gray-blue;
+    font-size: 0.7rem;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+  }
+
+  &-text {
+    color: $color-gray-blue;
+    font-size: 0.9rem;
+    font-weight: $font-bold;
+  }
+
+  &.with-header {
+    margin: 10px 0;
+  }
+
+  .mat-slide-toggle {
+    margin: 0 10px;
+  }
+}
+
+//mat-options
+
+.filter-option > .mat-pseudo-checkbox {
+  display: none !important;
+}

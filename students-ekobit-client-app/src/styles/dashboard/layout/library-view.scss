@@ -1,0 +1,31 @@
+// CONTENT/LIBRARY VIEW
+
+.#{$class-prefix}-library {
+  &-imagelist {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 6px;
+    padding: 0 18px 18px;
+
+    &-item {
+      .mat-button {
+        padding: 0;
+      }
+    }
+
+    &-button {
+      background: $color-blue-site;
+      color: $color-white;
+      height: 100%;
+      width: 100%;
+    }
+
+    &-image {
+      width: 100%;
+    }
+
+    &-icon {
+      font-size: 1.5rem;
+    }
+  }
+}

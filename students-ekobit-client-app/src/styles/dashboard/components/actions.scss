@@ -1,0 +1,109 @@
+// ACTIONS
+
+$dash-actions-menu-button-text-icon-size: 34px;
+$dash-actions-menu-button-add-box: 36px;
+
+.#{$class-prefix}-actions {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  &.one-on-right {
+    justify-content: flex-end;
+  }
+
+  &-field {
+    margin-left: 3%;
+  }
+
+  &-button {
+    align-items: center;
+    display: flex;
+    font-size: $font-size-button;
+    font-weight: $font-weight-button;
+
+    &.mat-button {
+      padding: 0;
+    }
+
+    &-wrapper {
+      display: flex;
+
+      .#{$class-prefix}-button {
+        margin-right: 2px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &-box {
+      @extend .flex-center;
+
+      background-color: $color-blue-site;
+      border-radius: $border-radius;
+      height: $dash-actions-menu-button-add-box;
+      margin-right: 10px;
+      transition: background 0.3s $ease-smooth;
+      width: $dash-actions-menu-button-add-box;
+
+      .dash-actions-button:hover & {
+        background-color: $color-blue-light;
+      }
+    }
+
+    &-icon {
+      color: $color-white;
+      font-weight: bold;
+      transition: transform 0.7s $ease-smooth;
+      transform: scale(0.8);
+
+      .dash-actions-button:hover & {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &-menu {
+    background-color: $color-gray-light;
+    color: $color-gray;
+    font-size: $font-size-button;
+    font-weight: $font-weight-button;
+    text-align: center;
+
+    &-wrapper {
+      display: flex;
+    }
+
+    &-buttons {
+      .dash-button + .dash-button {
+        margin-left: 1px;
+      }
+    }
+  }
+
+  .dash-actions-menu {
+    border: 1px solid $color-border-gray;
+    border-radius: $border-radius;
+    margin-left: 10px;
+  }
+
+  &-select {
+    background-color: $color-gray-light;
+    color: $color-gray;
+    font-size: $font-size-button;
+    font-weight: $font-weight-button;
+    text-align: center;
+
+    &-wrapper {
+      display: flex;
+    }
+  }
+  
+  .dash-actions-select {
+    border: 1px solid $color-border-gray;
+    border-radius: $border-radius;
+  }
+}

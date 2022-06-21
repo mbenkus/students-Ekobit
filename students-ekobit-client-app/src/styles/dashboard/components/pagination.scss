@@ -1,0 +1,56 @@
+// PAGINATION
+
+.#{$class-prefix}-pagination {
+  @extend .#{$class-prefix}-card-style;
+
+  align-items: center;
+  display: flex;
+
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-list {
+    color: $color-gray-dark;
+    display: flex;
+  }
+
+  &-item {
+    padding: 0 4px;
+  }
+
+  &-button,
+  .mat-button {
+    @extend .button-hover-color;
+
+    align-items: center;
+    border-right: 1px solid $color-border-gray;
+    color: $color-gray-dark;
+    display: flex;
+    height: 36px;
+    min-width: initial;
+
+    &.active {
+      color: $color-blue-site;
+    }
+
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  &-prev.mat-button,
+  &-next.mat-button {
+    padding: 0 8px;
+  }
+
+  &-next.mat-button  {
+    border: none;
+  }
+
+  .mat-icon-button {
+    border-radius: initial;
+  }
+}

@@ -1,0 +1,81 @@
+// IMAGELIST(library, users avatar)
+
+.#{$class-prefix}-imagelist {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: 6px;
+  padding: 0 18px 18px;
+
+  &.avatars {
+    display: flex;
+
+    .show-list & {
+      flex-direction: column;
+    }
+  }
+
+  &-item {
+    margin-right: 8px;
+
+    &.show-on-list {
+      display: none;
+
+      .show-list & {
+        display: flex;
+      }
+    }
+
+    .show-list & {
+      align-items: center;
+      display: flex;
+      margin: 0 0 20px;
+    }
+
+    &.index {
+      .show-list & {
+        display: none;
+      }
+    }
+
+    .mat-button {
+      min-width: initial;
+      padding: 0;
+    }
+  }
+
+  &-button {
+    background: $color-blue-site;
+    color: $color-white;
+    // height: 100%;
+    // width: 100%;
+
+    .avatars & {
+      @extend .#{$class-prefix}-index-style;
+
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: $imagelist-avatar-size;
+      overflow: hidden;
+      width: $imagelist-avatar-size;
+    }
+  }
+
+  &-image {
+    width: 100%;
+  }
+
+  &-icon {
+    font-size: 1.5rem;
+
+    .avatars & {
+      font-size: 1.4rem;
+    }
+  }
+
+  &-name {
+    @extend .text-main;
+
+    margin: 0 15px;
+  }
+}

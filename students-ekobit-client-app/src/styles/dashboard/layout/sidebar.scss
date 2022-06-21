@@ -1,0 +1,166 @@
+// SIDEBAR
+
+$dash-sidebar-users-index-size: 20px;
+
+.#{$class-prefix}-sidebar {
+  flex: 0 0 24%;
+  margin-right: 40px;
+  min-width: $sidebar-width;
+
+  .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    @extend .#{$class-prefix}-card-style;
+  }
+
+  .mat-expansion-panel-body {
+    padding: 0;
+  }
+
+  &-title {
+    color: $color-gray-dark;
+    font-size: 0.85rem;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+  }
+
+  &-content {
+    @extend .flex-column;
+
+    padding: 20px;
+  }
+
+  &-search {
+    background: $color-background;
+    border-bottom: 1px solid $color-border-gray;
+    border-top: 1px solid $color-border-gray;
+  }
+
+  &-submit {
+    margin-top: 20px;
+  }
+
+  &-item {
+    @extend .flex-column;
+
+    &.flex-end {
+      align-items: flex-end;
+    }
+
+    &-header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    &-title {
+      color: $color-gray-blue;
+      font-size: 0.7rem;
+      font-weight: $font-bold;
+      text-transform: uppercase;
+      transform: translateY(11px);
+    }
+  }
+
+  &-button {
+    width: 100%;
+  }
+
+  //
+
+  &-list {
+    @extend .flex-column;
+
+    padding: 0 20px 20px;
+    
+    &-item {
+      margin-bottom: 14px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // List of users
+
+  &-users {
+    @extend .flex-column;
+
+    padding: 0 20px 20px;
+
+    &-item {
+      @extend .#{$class-prefix}-card-style;
+
+      align-items: center;
+      background: $color-gray-light;
+      display: flex;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-button {
+      &-drag {
+        height: 22px;
+        margin-right: 8px;
+      }
+    }
+
+    &-name {
+      margin-right: 8px;
+    }
+
+    &-index {
+      @extend .#{$class-prefix}-index-style;
+      @extend .text-small;
+
+      height: $dash-sidebar-users-index-size;
+      margin-right: 4px;
+      position: relative;
+      width: $dash-sidebar-users-index-size;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &-wrapper {
+        display: flex;
+      }
+    }
+
+    &-disabled {
+      @extend .#{$class-prefix}-index-style;
+      @extend .text-small;
+
+      background-color: rgba(0, 0, 0, 0.4);
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      &-icon {
+        font-weight: bold;
+        transform: scale(0.6);
+      }
+    }
+
+  }
+
+
+
+  // testing
+  .mat-action-row {
+    border-top-color: $color-border-gray;
+  }
+}
+
+// testing
+
+.mat-form-field-infix {
+  padding: 0;
+}

@@ -1,0 +1,59 @@
+// ITEM MENU
+
+.#{$class-prefix}-item-menu {
+  @extend .#{$class-prefix}-card-style;
+
+  background-color: $color-gray-light;
+  position: absolute;
+  right: 20px;
+  top: 18px;
+
+  &.transparent {
+    background: 0;
+    border: 0;
+  }
+
+  &-button,
+  .mat-button {
+    @extend .reset-mat-button;
+
+    padding: 0 8px;
+  }
+
+  &-button {
+    color: $color-gray-dark;
+
+    &.active {
+      color: $color-blue-site;
+    }
+
+    &.border {
+      border-left: 1px solid $color-border-gray;
+      border-radius: initial;
+      border-right: 1px solid $color-border-gray;
+    }
+
+    &.border-right {
+      border-radius: initial;
+      border-right: 1px solid $color-border-gray;
+    }
+
+    .mat-icon {
+      font-size: 1.8rem;
+      width: 20px;
+    }
+  }
+
+  &-button-2 {
+    color: $color-gray;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-gold;
+    }
+
+    .selected & {
+      color: $color-gold;     
+    }
+  }
+}

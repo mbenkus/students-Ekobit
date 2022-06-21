@@ -1,0 +1,99 @@
+// VARIABLES
+// Animation
+
+$ease-smooth: cubic-bezier(0.4, 0.2, 0, 1);
+
+// z-index
+
+$zindex-menu: 10;
+
+// Typography
+
+$font-family: 'Source Sans Pro', sans-serif;
+$font-size: 14px;
+$font-size-button: 0.9rem;
+$font-regular: 400;
+$font-bold: 600;
+$font-weight-button: $font-bold;
+$font-size-xl: 1.25em;
+
+// Colors
+
+$color-white: #fff;
+$color-black: #000;
+$color-red: #c00;
+$color-red-dark: #281c20;
+$color-blue-black: #1d2531;
+
+$color-green: $color-rc-green;
+$color-blue-site: $color-rc-blue;
+$color-blue-light: $color-rc-blue-light;
+$color-blue-dark: $color-rc-blue-dark;
+$color-gray: $color-rc-gray;
+$color-gray-light: $color-rc-gray-light;
+$color-gray-light-2: $color-rc-gray-light-2;
+
+$color-gray-dark: #666;
+$color-gray-blue: #848c98;
+$color-gray-blue-2: #dfe4ee;
+$color-gold: #ffb500;
+$color-background: #f9fcfe;
+$color-border-gray: #e7e9ed;
+
+$color-hover: $color-blue-site;
+$color-active: $color-blue-site;
+
+$color-tag-blue-1: $color-rc-gradient-start;
+$color-tag-blue-2: $color-rc-gradient-end;
+$color-tag-blue-3: $color-rc-blue-light-2;
+$color-tag-blue-4: $color-rc-blue-light-3;
+$color-tag-green-1: $color-rc-green;
+$color-tag-green-2: $color-rc-green-light;
+$color-tag-green-3: $color-rc-green-light-2;
+$color-tag-green-4: $color-rc-green-light-3;
+$color-tag-green-5: $color-rc-green-light-4;
+
+// General
+
+$class-prefix: 'dash';
+$main-width: 1200px;
+$main-padding-horizontal: 35px;
+$border-radius: 4px;
+
+// Menu
+
+$menu-height: 68px;
+$menu-font-size: 15px;
+$menu-color-hover: $color-blue-site;
+$menu-background-color: rgba($color-black, 0.7);
+
+$submenu-height: 150px;
+$submenu-item-padding: 4px 10px;
+$submenu-background-color: rgba($color-black, 0.75);
+
+// Header
+
+$main-logo-size: 145px;
+$cover-height: 293px;
+
+// Main content
+
+$sidebar-width: 274px;
+
+// Imagelist avatar
+
+$imagelist-avatar-size: 33px;
+
+// Settings
+
+$settings-sidebar-width: 300px;
+$settings-sidebar-icon: 40px;
+$settings-form-avatar: 60px;
+$settings-services-icon: 16px;
+
+// Analytics
+
+$analytics-sidebar-min-width: 170px;
+$analytics-sidebar-icon: 40px;
+$analytics-form-avatar: 60px;
+$analytics-services-icon: 16px;

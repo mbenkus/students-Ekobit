@@ -1,0 +1,57 @@
+// Material Angular
+// https://material.angular.io/components/datepicker/overview
+
+.mat {
+  &-accordion {
+    display: block;
+
+    & + .mat-accordion {
+      margin-top: 20px;
+    }
+  }
+  &-form {
+    &-field {
+      &-wrapper {
+        .mat-form-field-appearance-legacy & {
+          // padding: 0;
+        }
+      }
+    }
+  }
+
+  &-menu {
+    &-item {
+      color: $color-gray-blue;
+      font-size: 0.88rem;
+    }
+  }
+
+  &-input {-webkit-input-placeholder
+    &-element {
+      color: $color-blue-site !important;
+      font-size: 0.88rem !important;
+    }
+  }
+
+  &-select {
+    &-value {
+      &-text {
+        color: $color-blue-site;
+        font-size: 0.88rem;
+      }
+    }
+  }
+
+  &-option {
+    &-text {
+      color: $color-gray-blue;
+      font-size: 0.88rem;
+    }
+  }
+
+  &-calendar {
+    &-header {
+      padding-top: 0 !important;
+    }
+  }
+}

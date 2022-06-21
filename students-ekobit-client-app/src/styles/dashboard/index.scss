@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+// Rods&Cones branding
+
+// Typograhpy
+
+$font-family-rc-title: 'Work Sans', sans-serif;
+$font-family-rc-text: 'Karla', sans-serif;
+
+// Colors
+
+$color-rc-blue: #2597B9;
+$color-rc-blue-light: #31ABD4;
+$color-rc-blue-dark: #1B83A0;
+$color-rc-gray: #A3A3A3;
+$color-rc-gray-light: #C2C2C2;
+$color-rc-gray-light-2: #E4E4E4;
+$color-rc-green: #5DC4A7;
+$color-rc-green-light: #87aa9b;
+$color-rc-green-light-2: #A6EBCE;
+$color-rc-green-light-3: #6bf3ba;
+$color-rc-green-light-4: #33d692;
+$color-rc-gradient-start: #2C73B3;
+$color-rc-gradient-end: #10AABF;
+$color-rc-blue-light-2: #7fc1db;
+$color-rc-blue-light-3: #72ccd6;
+
+// Palette
+
+$palette-rc-blue: (
+  50: #2597B9,
+  100: #2597B9,
+  200: #2597B9,
+  300: #2597B9,
+  400: #2597B9,
+  500: #2597B9,
+  600: #2597B9,
+  700: #2597B9,
+  800: #2597B9,
+  900: #2597B9,
+  A100: #2597B9,
+  A200: #2597B9,
+  A400: #2597B9,
+  A700: #2597B9,
+  contrast: (
+    50: #FFFFFF,
+    100: #FFFFFF,
+    200: #FFFFFF,
+    300: #FFFFFF,
+    400: #FFFFFF,
+    500: #FFFFFF,
+    600: #FFFFFF,
+    700: #FFFFFF,
+    800: #FFFFFF,
+    900: #FFFFFF,
+    A100: #FFFFFF,
+    A200: #FFFFFF,
+    A400: #FFFFFF,
+    A700: #FFFFFF,
+  )
+);
+
+@import '@angular/material/theming';
+
+$custom-typography: mat.define-typography-config(
+  $font-family: 'Karla, sans-serif',
+  $headline: mat.define-typography-level(32px, 48px, 700),
+  $body-1: mat.define-typography-level(16px, 24px, 500)
+);
+
+@include mat.core($custom-typography);
+
+$my-app-primary: mat.define-palette($palette-rc-blue);
+$my-app-accent: mat.define-palette($palette-rc-blue);
+$my-app-theme: mat.define-light-theme($my-app-primary, $my-app-accent);
+
+@include mat.all-component-themes($my-app-theme);
+
+// Imports
+@import 'base/index';
+@import 'components/index';
+@import 'layout/index';

@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body, .dashboard {
+  height: 100%;
+  width: 100%;
+}
+
+.dashboard {
+  overflow-y: auto;
+}
+
+body {
+  background: $color-background;
+  margin: 0;
+}
+
+.#{$class-prefix}-main {
+  padding: 11px $main-padding-horizontal;
+
+  &-content {
+    flex: 1 1 100%;
+  }
+}
+
+// Imports
+
+@import 'shared';
+@import 'header';
+@import 'navigation';
+@import 'sidebar';
+@import '../components/dialogs/index';
+@import 'publications';
+@import 'settings';

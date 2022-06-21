@@ -1,0 +1,72 @@
+// Dialog list
+
+.#{$class-prefix}-dialog-list {
+  @extend .flex-column;
+
+  &-item {
+    @extend .flex-center;
+
+    padding: 10px 0;
+  }
+
+  &-column {
+    align-items: center;
+    display: flex;
+
+    &.padding {
+      padding-right: 20px;
+    }
+
+    &.twenty {
+      flex: 1 1 20%;
+    }
+
+    &.forty {
+      flex: 1 1 40%;
+    }
+
+    &.sixty {
+      flex: 1 1 60%;
+    }
+
+    &.full {
+      flex: 1 1 100%;
+    }
+  }
+
+
+  &-text {
+    @extend .truncate-text;
+    @extend .text-main;
+
+    &.disabled,
+    &.gray {
+      color: $color-gray;
+    }
+
+    &.green,
+    &.success {
+      color: $color-green;
+    }
+
+    &.red,
+    &.error {
+      color: $color-red;
+    }
+  }
+
+  .mat-icon,
+  &-icon {
+    font-size: 1.6rem;
+  }
+
+  .mat-button {
+    &.button-drag {
+      height: 36px;
+      margin-right: 20px;
+      min-width: initial;
+      padding: 0;
+      width: 24px;
+    }
+  }
+}

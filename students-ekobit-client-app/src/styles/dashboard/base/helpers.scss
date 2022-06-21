@@ -1,0 +1,47 @@
+// HELPERS
+
+// Flex column
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Flex centerlized content
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+// Text
+
+.truncate-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Multiline text in tooltip
+
+.multiline-tooltip {
+  white-space: pre-line;
+}
+
+// Show pointer
+
+.pointer {
+  cursor: pointer;
+}
+
+// Password form field
+
+.password-margin {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.input-flex {
+  display: flex;
+}
