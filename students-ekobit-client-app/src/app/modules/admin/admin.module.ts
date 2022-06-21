@@ -5,19 +5,25 @@ import { RouterModule, Routes } from "@angular/router";
 import { SharedModule } from "src/app/shared/shared.module";
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { MenuComponent } from "./components/elements/menu/menu.component";
+import { EditMovieComponent } from "./components/pages/movies/edit/edit-movie.component";
+import { ListItemMovieComponent } from "./components/pages/movies/item/list-item-movie.component";
+import { ListMoviesComponent } from "./components/pages/movies/list/list-movies.component";
 import { EditTheatreComponent } from "./components/pages/theatre/edit/edit-theatre.component";
 import { ListItemTheatreComponent } from "./components/pages/theatre/item/list-item-theatre.component";
 import { ListTheatresComponent } from "./components/pages/theatre/list/list-theatres.component";
 
 const dialogs = [
-  EditTheatreComponent
+  EditTheatreComponent,
+  EditMovieComponent
 ];
 
 const components = [
   DashboardComponent,
   MenuComponent,
   ListTheatresComponent,
-  ListItemTheatreComponent
+  ListItemTheatreComponent,
+  ListMoviesComponent,
+  ListItemMovieComponent
 ];
 
 const routes: Routes = [
@@ -34,6 +40,10 @@ const routes: Routes = [
         path: 'theatres',
         component: ListTheatresComponent
       },
+      {
+        path: 'movies',
+        component: ListMoviesComponent
+      }
       // {
       //   path: 'movie-showings',
       //   component: ListMovieShowingsComponent

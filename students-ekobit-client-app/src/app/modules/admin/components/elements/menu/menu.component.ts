@@ -15,7 +15,8 @@ export class MenuComponent implements OnInit {
   PATHS = {
     Default: '/admin',
     Theatres: '/admin/theatres',
-    MovieShowings: '/admin/movie-showings'
+    MovieShowings: '/admin/movie-showings',
+    Movies: '/admin/movies'
   };
 
   constructor(
@@ -32,6 +33,10 @@ export class MenuComponent implements OnInit {
 
     if (url.indexOf(this.PATHS.Theatres) !== -1) {
       this.title = 'All Theatres';
+    }
+
+    if (url.indexOf(this.PATHS.Movies) !== -1) {
+      this.title = 'All Movies';
     }
 
     if (url.indexOf(this.PATHS.MovieShowings) !== -1) {

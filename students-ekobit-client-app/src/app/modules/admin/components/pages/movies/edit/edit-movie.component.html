@@ -1,0 +1,37 @@
+<div class="dash-dialog">
+  <div class="dash-dialog-header">
+    <div class="dash-dialog-title">Edit theatre</div>
+  </div>
+  <div class="dash-dialog-content">
+    <div class="dash-dialog-form">
+
+      <mat-form-field class="dash-form-field">
+        <input type="text" matInput [(ngModel)]="model.title" required [placeholder]="'Title'"/>
+      </mat-form-field>
+
+      <mat-form-field  class="dash-form-field">
+        <input type="number" matInput [(ngModel)]="model.duration" [placeholder]="'Duration'" />
+      </mat-form-field>
+
+      <mat-form-field  class="dash-form-field">
+        <input type="number" matInput [(ngModel)]="model.rating" [placeholder]="'Rating'" />
+      </mat-form-field>
+
+      <mat-form-field  class="dash-form-field">
+        <input type="text" matInput [(ngModel)]="model.country" [placeholder]="'Country'" />
+      </mat-form-field>
+
+    </div>
+  </div>
+
+  <div class="dash-dialog-footer">
+    <button type="button" mat-button (click)="cancel()" class="dash-settings-form-button gray">
+      Cancel
+    </button>
+    <div>
+      <button mat-button class="dash-settings-form-button position" [disabled]="!validateModel()" (click)="save()">
+        Save
+      </button>
+    </div>
+  </div>
+</div>

@@ -7,10 +7,14 @@
         </div>
       </div>
       <div class="dash-publications-item-info">
-        <div class="row fontsize-xl">{{ element.name}}</div>
-        <div class="row">{{ element.city }}</div>
+        <div class="row fontsize-xl">{{ element.title}}</div>
+        <div class="row">{{ element.duration | durationFormat }}</div>
         <div class="dash-data-list">
           <div class="dash-data-item">
+            <div class="dash-data-item" *ngIf="element.rating">
+              <p class="dash-data-label">Rating</p>
+              <p class="dash-data-value">{{ element.rating }}</p>
+            </div>
             <a class="dash-data-label" (click)="showMovieShowings()">
               Movie Showings
             </a>
@@ -26,8 +30,8 @@
             </button>
             <button mat-menu-item
               esConfirm (accept)="delete(element.id)"
-              confirmTitle="Delete theatre"
-              confirmText="Are you sure you want to delete theatre?">
+              confirmTitle="Delete movie"
+              confirmText="Are you sure you want to delete movie?">
               Delete
             </button>
           </mat-menu>

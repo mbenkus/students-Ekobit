@@ -8,7 +8,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DurationFormatPipe implements PipeTransform {
 
   transform(value: number): string {
-    const hours = value / 60;
+    const hours = Math.floor(value / 60);
     const minutes = value % 60;
     
     if (hours >= 1) {

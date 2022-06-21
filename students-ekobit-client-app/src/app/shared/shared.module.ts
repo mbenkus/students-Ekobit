@@ -92,7 +92,6 @@ const dialogs = [
     ...material,
     CommonModule,
     FormsModule,
-    MatIconModule,
     ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'})
   ],
   exports: [
