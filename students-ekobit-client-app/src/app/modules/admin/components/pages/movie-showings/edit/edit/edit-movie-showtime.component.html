@@ -1,0 +1,49 @@
+<div class="dash-dialog">
+  <div class="dash-dialog-header">
+    <div class="dash-dialog-title">Edit movie</div>
+  </div>
+  <div class="dash-dialog-content">
+    <div class="dash-dialog-form">
+
+      <mat-form-field class="dash-form-field">
+        <mat-label>Theatre</mat-label>
+        <mat-select [(ngModel)]="model.theatreId">
+          <mat-option *ngFor="let item of theatres" [value]="item.id">
+            {{ item.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="dash-form-field">
+        <input type="text" matInput [(ngModel)]="model.auditorium" [placeholder]="'Auditorium'"/>
+      </mat-form-field>
+
+      <mat-form-field class="dash-form-field">
+        <mat-label>Movie</mat-label>
+        <mat-select [(ngModel)]="model.movieId">
+          <mat-option *ngFor="let item of movies" [value]="item.id">
+            {{ item.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="dash-form-field">
+        <input matInput [matDatepicker]="pickerStartDate" [(ngModel)]="model.startTime"
+          placeholder="Start time">
+        <mat-datepicker #pickerStartDate></mat-datepicker>
+      </mat-form-field>
+
+    </div>
+  </div>
+
+  <div class="dash-dialog-footer">
+    <button type="button" mat-button (click)="cancel()" class="dash-settings-form-button gray">
+      Cancel
+    </button>
+    <div>
+      <button mat-button class="dash-settings-form-button position" [disabled]="!validateModel()" (click)="save()">
+        Save
+      </button>
+    </div>
+  </div>
+</div>

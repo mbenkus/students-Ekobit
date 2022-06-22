@@ -53,6 +53,6 @@ export class EditMovieComponent implements OnInit {
   }
 
   private init() {
-    this.model = this.data;
+    this.model = this.data || {};
   }
 }

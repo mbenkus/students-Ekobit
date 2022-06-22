@@ -14,8 +14,5 @@ namespace Data.Entities
         public string Country { get; set; }
 
         public decimal Rating { get; set; }
-
-        [InverseProperty("Movie")]
-        public ICollection<MovieShowtime> MovieShowtime { get; set; }
     }
 }

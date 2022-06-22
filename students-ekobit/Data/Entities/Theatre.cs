@@ -18,8 +18,5 @@ namespace Data.Entities
         public string State { get; set; }
 
         public int ZipCode { get; set; }
-
-        [InverseProperty("Theatre")]
-        public ICollection<MovieShowtime> MovieShowtime { get; set; }
     }
 }

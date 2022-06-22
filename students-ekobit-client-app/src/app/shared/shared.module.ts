@@ -66,7 +66,7 @@ const material = [
   MatProgressBarModule,
   MatSortModule,
   MatChipsModule,
-  MatAutocompleteModule
+  MatAutocompleteModule,
 ];
 
 

@@ -11,7 +11,5 @@
         public string Country { get; set; }
 
         public decimal Rating { get; set; }
-
-        public ICollection<MovieShowtime>? MovieShowtime { get; set; }
     }
 }

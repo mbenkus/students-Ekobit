@@ -13,7 +13,7 @@ namespace Library.Services
     {
         protected readonly IDatabaseScope _database;
         protected readonly IGenericRepository<TEntity> _entityRepository;
-        private readonly IMapper _mapper;
+        protected readonly IMapper _mapper;
 
         public IGenericRepository<TEntity> EntityRepository
         {

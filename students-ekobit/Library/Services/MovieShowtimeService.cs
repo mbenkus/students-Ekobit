@@ -2,6 +2,7 @@
 using Library.Models;
 using Data.Context;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace Library.Services
 {
@@ -14,6 +15,16 @@ namespace Library.Services
             : base(database, repository, mapper)
         {
 
+        }
+
+        public override async Task<List<MovieShowtime>> GetAllAsync()
+        {
+            var showtimes = await _entityRepository.GetAll()
+                .Include(e => e.Theatre)
+                .Include(e => e.Movie)
+                .ToListAsync();
+
+            return _mapper.Map<List<Library.Models.MovieShowtime>>(showtimes);
         }
 
         protected override IQueryable<Entities.MovieShowtime> GetSingleEntityQuery(IQueryable<Entities.MovieShowtime> query, int id)

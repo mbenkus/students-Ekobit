@@ -35,7 +35,7 @@ export class EditTheatreComponent implements OnInit {
 
   async save(): Promise<void> {
     if (this.form.valid) {
-      const data = this.form.value as Theatre;
+      const data = this.form.getRawValue() as Theatre;
 
       if (this.id) {
         await firstValueFrom(this.service.update(data));
@@ -55,12 +55,12 @@ export class EditTheatreComponent implements OnInit {
     this.id = this.data?.id;
 
     this.form = new FormGroup({
-      name: new FormControl(this.data?.name, Validators.required),
-      address: new FormControl(this.data?.address),
-      city: new FormControl(this.data?.city),
-      state: new FormControl(this.data?.state),
-      zipCode: new FormControl(this.data?.zipCode),
-      telephone: new FormControl(this.data?.telephone)
+      name: new FormControl(this.data?.name || '', Validators.required),
+      address: new FormControl(this.data?.address || ''),
+      city: new FormControl(this.data?.city || ''),
+      state: new FormControl(this.data?.state || ''),
+      zipCode: new FormControl(this.data?.zipCode || ''),
+      telephone: new FormControl(this.data?.telephone || '')
     });
   }
 }

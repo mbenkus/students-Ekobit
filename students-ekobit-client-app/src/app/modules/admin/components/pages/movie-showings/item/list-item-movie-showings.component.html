@@ -1,0 +1,39 @@
+<div class="dash-publications-item">
+  <div class="dash-publications-item-wrapper">
+    <div class="dash-publications-item-content">
+      <div class="dash-publications-item-image-wrapper">
+        <div class="dash-publications-item-initials-image">
+          <p>M</p>
+        </div>
+      </div>
+      <div class="dash-publications-item-info">
+        <div class="row fontsize-xl">{{ element.theatre.name }} {{ element.auditorium }}</div>
+        <div class="row">{{ element.movie.title }} {{ element.movie.duration | durationFormat }}</div>
+        <div class="dash-data-list">
+          <div class="dash-data-item">
+            <div class="dash-data-item" *ngIf="element.movie?.rating">
+              <p class="dash-data-label">Rating</p>
+              <p class="dash-data-value">{{ element.movie.rating }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="dash-item-menu">
+          <button class="dash-item-menu-button" mat-button [matMenuTriggerFor]="itemMenu">
+            <mat-icon class="dash-item-menu-button-icon">expand_more</mat-icon>
+          </button>
+          <mat-menu #itemMenu="matMenu">
+            <button mat-menu-item (click)="edit(element)">
+              Edit
+            </button>
+            <button mat-menu-item
+              esConfirm (accept)="delete(element.id)"
+              confirmTitle="Delete movie showtime"
+              confirmText="Are you sure you want to delete movie showtime?">
+              Delete
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.mat-header-row {
+  display: none;
+}
+
+.mat-cell:last-child {
+  padding-right: 0px;
+}
+
+.mat-cell:first-child {
+  padding-left: 0px;
+}
+
+.mat-row {
+  border-bottom-width: 0px
+}
+
+.dash-sidebar-main {
+  display: block;
+}
+
+.dash-content-item-wrapper {
+  width: 100%;
+}
+
+
+.dash-actions-menu-wrapper {
+  &.import {
+    margin-left: 25px;
+    margin-right: auto;
+  }
+}
+
+.dash-actions {
+  justify-content: flex-start;
+
+  &-menu-wrapper {
+    margin-right: 20px;
+  }
+}

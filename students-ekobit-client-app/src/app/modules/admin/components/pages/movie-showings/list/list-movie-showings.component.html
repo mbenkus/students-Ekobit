@@ -1,0 +1,40 @@
+<div class="dash-wrapper">
+
+  <div class="dash-sidebar-main">
+    <div class="dash-sidebar">
+    </div>
+  </div>
+
+  <div class="dash-main-content">
+
+    <div class="dash-actions">
+
+      <div class="dash-actions-menu-wrapper">
+        <button class="dash-actions-button" (click)="add()">
+          <div class="dash-actions-button-box">
+            <mat-icon class="dash-actions-button-icon">add</mat-icon>
+          </div>
+          Add
+        </button>
+      </div>
+
+    </div>
+
+    <div class="dash-publications-list library-view">
+
+      <mat-table #table [dataSource]="dataSource" matSort class="table mat-transparent-table">
+        <ng-container matColumnDef="id">
+          <mat-cell *matCellDef="let element">
+            <es-list-item-movie-showings class="dash-content-item-wrapper"
+              [element]="element"
+              (edited)="edit($event)"
+              (deleted)="delete($event)">
+            </es-list-item-movie-showings>
+          </mat-cell>
+        </ng-container>
+
+        <mat-row *matRowDef="let row; columns: columns;"></mat-row>
+      </mat-table>
+    </div>
+  </div>
+</div>

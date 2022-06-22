@@ -1,7 +1,10 @@
 import { MovieShowtime } from './movie-showtime.model';
 
-export interface Theatre {
-    id: number;
+export interface Theatre extends TheatreUpdate{
+    id: number
+}
+
+export interface TheatreUpdate {
     name: string;
     telephone: string;
     address: string;

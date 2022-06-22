@@ -11,10 +11,14 @@ import { ListMoviesComponent } from "./components/pages/movies/list/list-movies.
 import { EditTheatreComponent } from "./components/pages/theatre/edit/edit-theatre.component";
 import { ListItemTheatreComponent } from "./components/pages/theatre/item/list-item-theatre.component";
 import { ListTheatresComponent } from "./components/pages/theatre/list/list-theatres.component";
+import { ListItemMovieShowingsComponent } from './components/pages/movie-showings/item/list-item-movie-showings.component';
+import { ListMovieShowingsComponent } from "./components/pages/movie-showings/list/list-movie-showings.component";
+import { EditMovieShowtimeComponent } from "./components/pages/movie-showings/edit/edit/edit-movie-showtime.component";
 
 const dialogs = [
   EditTheatreComponent,
-  EditMovieComponent
+  EditMovieComponent,
+  EditMovieShowtimeComponent
 ];
 
 const components = [
@@ -23,7 +27,9 @@ const components = [
   ListTheatresComponent,
   ListItemTheatreComponent,
   ListMoviesComponent,
-  ListItemMovieComponent
+  ListItemMovieComponent,
+  ListMovieShowingsComponent,
+  ListItemMovieShowingsComponent
 ];
 
 const routes: Routes = [
@@ -43,11 +49,11 @@ const routes: Routes = [
       {
         path: 'movies',
         component: ListMoviesComponent
+      },
+      {
+        path: 'movie-showings',
+        component: ListMovieShowingsComponent
       }
-      // {
-      //   path: 'movie-showings',
-      //   component: ListMovieShowingsComponent
-      // }
     ]
   }
 ]
@@ -61,7 +67,7 @@ const routes: Routes = [
   ],
   declarations: [
     ...components,
-    ...dialogs
+    ...dialogs,
   ],
   providers: [
 
